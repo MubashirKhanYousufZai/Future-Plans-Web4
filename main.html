@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Future Plans😊</title>
+        <link href="./main.css" rel="stylesheet" />
+    </head>
+    <h1>Future Plans😊</h1>
+    <body style="background-color:rgb(180, 135, 222);">
+        <body onload="get()">
+        <p id="savedText"></p>
+        <p id="openedText"></p>
+
+        <input type="text" id="input">
+        <button style="font-size: 20px; background-color: aquamarine; border-radius: 5px; font-family:cursive;" onclick="save()">Save Plans😊</button>
+        </body>
+        <script>
+            var storedItem = localStorage.getItem("storedItem");
+            function save(){
+                var Item = document.getElementById("input").value;
+                localStorage.setItem("storedItem",Item);
+                document.getElementById("savedText").innerHTML = Item + " SAVED";
+            }
+            function get(){
+                localStorage.getItem("storedItem");
+                document.getElementById("openedText").innerHTML = ITEM + "OPENED";
+            }
+        </script>
+        </body>
+        <a href="https://help.openai.com" rel="Future plans">
+       <button style="font-size: 20px; background-color: aquamarine; border-radius: 5px; font-family:cursive;">Get ideas about Future</button>
+        </a>
+        <a href="https://faq.whatsapp.com" rel="Contacts">
+            <button style="font-size: 20px; background-color: aquamarine; border-radius: 5px; font-family:cursive;">Share Your Plans With Your Trusted Contacts on Whatsapp</button> 
+        </a>
+        <a href="https://www.instagram.com" rel="Contacts">
+            <button style="font-size: 20px; background-color: aquamarine; border-radius: 5px; font-family:cursive;">Share Your Plans With Your Trusted Contacts on Instagram</button>
+        </a>
+    </body>
+</html>
